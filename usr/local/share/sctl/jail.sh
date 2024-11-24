@@ -24,7 +24,7 @@ while :; do
     esac
 done
 
-if [ -z "$JAIL_NAME" ];
+if [ -z "$JAIL_NAME" ]; then
     jail_usage
     exit 2
 fi
