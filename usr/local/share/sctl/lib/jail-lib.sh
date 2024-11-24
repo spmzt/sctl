@@ -72,7 +72,7 @@ jail_template()
 {
     IP6=$(get_jail_ipv6_rand)
     IF=$(get_jail_interface)
-    echo ".include /etc/jail.conf
+    echo ".include \"/etc/jail.conf\";
 $1 {
   devfs_ruleset=4;
 
