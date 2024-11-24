@@ -24,6 +24,16 @@ while :; do
     esac
 done
 
+if [ -z "$JAIL_NAME" ];
+    jail_usage
+    exit 2
+fi
+
+if	[ $# -ne 1 ]; then
+    jail_usage
+    exit 2
+fi
+
 if [ "$1" = "create" ]
 then
     jail_create $JAIL_NAME
