@@ -7,11 +7,11 @@ Usage:
   sctl jail COMMAND [name]
 
 Available Commands:
-    create		clone base jail to jail path with zfs and create jail.conf.
-    clone		clone base jail to jail path with zfs.
-    config		create jail.conf with template.
+    create      clone base jail to jail path with zfs and create jail.conf.
+    clone       clone base jail to jail path with zfs.
+    config      create jail.conf with template.
     template    jail template for creating jail.conf configurations under jail.conf.d.
-    service		enable jail and add it to jail_list to make it persistent.
+    service     enable jail and add it to jail_list to make it persistent.
 
 Use "sctl -v|--version" for version information.
 EOF
