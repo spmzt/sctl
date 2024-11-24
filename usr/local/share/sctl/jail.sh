@@ -24,7 +24,7 @@ while :; do
     esac
 done
 
-if [ -z "$JAIL_NAME" ]; then
+if [ -z "$JAIL_NAME" && "$1" != "setup" ]; then
     jail_usage
     exit 2
 fi
@@ -49,6 +49,9 @@ then
 elif [ "$1" = "service" ]
 then
     jail_service $JAIL_NAME
+elif [ "$1" = "setup" ]
+then
+    jail_setup
 else
     jail_usage
 fi
