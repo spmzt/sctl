@@ -4,7 +4,7 @@ jail_usage()
 {
     cat << EOF
 Usage:
-  sctl jail COMMAND [name]
+  sctl jail COMMAND [OPTIONS]
 
 Available Commands:
     create      clone base jail to jail path with zfs and create jail.conf.
@@ -12,6 +12,10 @@ Available Commands:
     config      create jail.conf with template.
     template    jail template for creating jail.conf configurations under jail.conf.d.
     service     enable jail and add it to jail_list to make it persistent.
+
+Available Options:
+    -n [name]   REQUIRED.
+    -h          help.
 
 Use "sctl -v|--version" for version information.
 EOF

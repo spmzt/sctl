@@ -2,24 +2,27 @@
 
 . /usr/local/share/sctl/common.sh
 
-#number of arguments
-NA=$(echo $* | wc -w)
-
-case "$NA" in
-    2)
-        JAIL_NAME=$2
+args=`getopt hn: $*`
+if	[ $? -ne 0 ]; then
+    jail_usage
+    exit 2
+fi
+set -- $args
+while :; do
+    case "$1" in
+    -n)
+        JAIL_NAME="$2"
+        shift; shift
         ;;
-    *)
+    -h)
         jail_usage
         exit 1
         ;;
-esac
-
-case "$1" in
-help|-h|--help)
-    jail_usage
-    ;;
-esac
+    --)
+        shift; break
+        ;;
+    esac
+done
 
 if [ "$1" = "create" ]
 then
