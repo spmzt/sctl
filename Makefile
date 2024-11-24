@@ -22,7 +22,7 @@ deps:
 		@pip install -r requirements.txt
 
 .PHONY: install
-install:
+install: deps
 		@echo "Installing sctl"
 		@echo
 		@cp -Rv usr /
@@ -38,7 +38,7 @@ install:
 		fi
 
 .PHONY: installonly
-installonly: deps
+installonly:
 		@echo "Installing sctl"
 		@echo
 		@cp -Rv usr /
