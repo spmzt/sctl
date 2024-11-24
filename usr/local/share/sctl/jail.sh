@@ -24,7 +24,7 @@ while :; do
     esac
 done
 
-if [ -z "$JAIL_NAME" && "$1" != "setup" ]; then
+if [ -z "$JAIL_NAME" ] && [ "$1" != "setup" ]; then
     jail_usage
     exit 2
 fi
