@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+# Version
+SCTL_VERSION="0.1.0"
+
+. /usr/local/share/sctl/common.sh
+
+[ $# -lt 1 ] && usage
+
+export CMD=$1
+shift
+
+# Handle special-case commands first.
+case "${CMD}" in
+version | -v | --version)
+  echo "${SCTL_VERSION}"
+  exit 0
+  ;;
+help | -h | --help)
+  usage
+  ;;
+esac
+
+SCRIPTPATH="/usr/local/share/sctl/${CMD}.sh"
+if [ -f "${SCRIPTPATH}" ]; then
+  : "${UMASK:=022}"
+  umask "${UMASK}"
+
+  : "${SH:=sh}"
+  exec "${SH}" "${SCRIPTPATH}" "$@"
+else
+  print_error "${SCRIPTPATH} not found."
+fi

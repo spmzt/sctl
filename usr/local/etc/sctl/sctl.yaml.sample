@@ -1,0 +1,9 @@
+jail:
+  zfs_dataset: "zroot/jails"
+  basejail:
+    name: "basejail"
+    snapshot: "latest"
+  ipv6:
+    prefix: "2a01:e140::"
+  domain: "spmzt.net"
+  interface: "vmx0"
