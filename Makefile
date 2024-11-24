@@ -34,7 +34,7 @@ install: deps
 		else\
 				echo "sctl configuration file is already exists at /usr/local/etc/sctl/sctl.yaml.";\
 				echo "If you want the new configuration use the following command below:";\
-				echo "\tinstall /usr/local/etc/sctl/sctl.yaml.sample /usr/local/etc/sctl/sctl.yaml";\
+				echo "    install /usr/local/etc/sctl/sctl.yaml.sample /usr/local/etc/sctl/sctl.yaml";\
 		fi
 
 .PHONY: installonly
