@@ -34,3 +34,8 @@ get_jail_interface()
 {
 	parse_yaml get-value jail.interface
 }
+
+get_ssh_port()
+{
+	parse_yaml get-value ssh.port
+}

@@ -7,3 +7,5 @@ jail:
     prefix: "2a01:e140::"
   domain: "spmzt.net"
   interface: "vmx0"
+ssh:
+  port: 1434

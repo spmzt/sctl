@@ -49,6 +49,9 @@ then
 elif [ "$1" = "service" ]
 then
     jail_service $JAIL_NAME
+elif [ "$1" = "install" ]
+then
+    jail_install $JAIL_NAME
 elif [ "$1" = "setup" ]
 then
     jail_setup
