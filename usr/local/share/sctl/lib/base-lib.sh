@@ -40,7 +40,8 @@ Usage:
   sctl command [args]
 
 Available Commands:
-  jail   prepare and create jails
+  jail     prepare and create jails.
+  kernel   prepare and create kernel development environment.
 
 Use "sctl -v|--version" for version information.
 Use "sctl command -h|--help" for more information about a command.
