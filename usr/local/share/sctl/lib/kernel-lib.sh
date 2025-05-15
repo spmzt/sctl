@@ -9,7 +9,7 @@ Available Commands:
     build      build your kernel from /usr/src.
     install    install your kernel to /tmp/kernel.
     mkfs       make filesystem from /tmp/kernel to /tmp/kernfs and kernfs.raw.
-    mkmg       make image from /tmp/kernfs.
+    mkimg       make image from /tmp/kernfs.
     dev        build kernel, make fs and img from kernel.
     vmconf     display vm configuration for booting from our specified kernel.
     -h         help.
